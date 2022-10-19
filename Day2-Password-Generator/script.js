@@ -7,6 +7,8 @@ const charLength = document.querySelector("#character-length"),
   includeSymbols = document.querySelector("#include-symbols"),
   generateButton = document.querySelector("#generate"),
   result = document.querySelector("#result"),
+  pwdStrength = document.querySelector("#strength-indicator"),
+  warningMessage = document.querySelector("#warning"),
   lowerCases = [
     "a",
     "b",
@@ -236,6 +238,39 @@ function pwdConditionsCheck(pwd) {
 function updateResult(updatedResult) {
   result.innerHTML = updatedResult;
 }
+function pwdStrengthMeasurement(pwd) {
+  let charTypeCount = 0;
+  if (/[a-z]/.test(pwd)) {
+    charTypeCount++;
+  }
+  if (/[A-Z]/.test(pwd)) {
+    charTypeCount++;
+  }
+  if (/\d/.test(pwd)) {
+    charTypeCount++;
+  }
+  if (/[^a-z|^A-Z|^0-9]/.test(pwd)) {
+    charTypeCount++;
+  }
+  if (
+    (pwd.length < 10 && charTypeCount < 3) ||
+    (charTypeCount < 3)
+    ) {
+    return "Low";
+  }
+  if (
+    (pwd.length <= 10 && charTypeCount == 3) ||
+    (pwd.length > 10 && pwd.length < 16 && charTypeCount == 2)
+  ) {
+    return "Medium";
+  }
+  if (
+    (pwd.length > 10 && charTypeCount >= 3) ||
+    (charTypeCount > 3)
+    ) {
+    return "High";
+  }
+}
 
 charLength.addEventListener("change", () => {
   charLengthUpdate();
@@ -245,10 +280,25 @@ window.addEventListener("load", () => {
 });
 generateButton.addEventListener("click", (e) => {
   e.preventDefault();
-  charPoolGenerate();
-  do {
-    pwdGenerate();
-  } while (!pwdConditionsCheck(pwd));
-  updateResult(pwd);
-  console.log(clicked)
+  if (
+    // Check if the user checked at least one type of character type
+    includeLowercase.checked === false &&
+    includeUppercase.checked === false &&
+    includeNumbers.checked === false &&
+    includeSymbols.checked === false
+  ) {
+    warningMessage.innerHTML =
+      "You have to choose at least one type of characters to generate the password!";
+  } else {
+    charPoolGenerate();
+    do {
+      pwdGenerate();
+    } while (!pwdConditionsCheck(pwd));
+    warningMessage.innerHTML = "";
+    updateResult(pwd);
+    pwdStrength.innerHTML = pwdStrengthMeasurement(pwd);
+    if (!result.classList.contains("show-result")) {
+      result.classList.add("show-result");
+    }
+  }
 });

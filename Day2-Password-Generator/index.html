@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,43 +8,50 @@
     <link rel="stylesheet" href="./style.css">
     <title>Day 2 - Password Generator</title>
 </head>
+
 <body>
     <main>
         <div class="card">
             <h1>Password Generator</h1>
-            <p id="result"></p>
-            <form action="">
-                <div class="form-block">
-                    <label for="character-length">Character Length</label>
+            <p id="warning"></p>
+            <div class="card-block dark-bg vertical-center">
+                <p id="result">_____</p>
+            </div>
+            <form action="" class="dark-bg card-block vertical-spread">
+                <div class="sub-card-block flex">
+                    <label for="character-length" class="form-label"">Character Length</label>
                     <p id="character-length-indicator"></p>
-                    <input type="range" min="8" max="50" value="25" id="character-length">
                 </div>
-                <div class="form-block">
+                <div class="sub-card-block">
+                    <input type="range" min="8" max="28" value="10" id="character-length">
+                </div>
+                <div class="sub-card-block">
                     <input type="checkbox" name="include-uppercase" id="include-uppercase">
-                    <label for="include-uppercase">Include Uppercase Letters</label>
+                    <label for="include-uppercase" class="form-label">Include Uppercase Letters</label>
                 </div>
-                <div class="form-block">
+                <div class="sub-card-block">
                     <input type="checkbox" name="include-lowercase" id="include-lowercase">
-                    <label for="include-lowercase">Include Lowercase Letters</label>
+                    <label for="include-lowercase" class="form-label">Include Lowercase Letters</label>
                 </div>
-                <div class="form-block">
+                <div class="sub-card-block">
                     <input type="checkbox" name="include-numbers" id="include-numbers">
-                    <label for="include-numbers">Include Numbers</label>
+                    <label for="include-numbers" class="form-label">Include Numbers</label>
                 </div>
-                <div class="form-block">
+                <div class="sub-card-block">
                     <input type="checkbox" name="include-symbols" id="include-symbols">
-                    <label for="include-symbols">Include Symbols</label>
+                    <label for="include-symbols" class="form-label">Include Symbols</label>
                 </div>
-                <div class="form-block">
-                    <label for="strength-indicator">Strength</label>
+                <div class="sub-card-block bottom-block flex card-color-darker-bg">
+                    <label for="strength-indicator" class="form-label">STRENGTH</label>
                     <p id="strength-indicator">Low</p>
                 </div>
-                <div class="form-block">
-                    <button id="generate">Generate</button>
+                <div class="sub-card-block bottom-block">
+                    <button id="generate" class="accent-color-bg">GENERATE</button>
                 </div>
             </form>
         </div>
     </main>
     <script src="./script.js"></script>
 </body>
+
 </html>
