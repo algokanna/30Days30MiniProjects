@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Day 2 - Password Generator</title>
+</head>
+<body>
+    <main>
+        <div class="card">
+            <h1>Password Generator</h1>
+            <p id="result"></p>
+            <form action="">
+                <div class="form-block">
+                    <label for="character-length">Character Length</label>
+                    <p id="character-length-indicator"></p>
+                    <input type="range" min="8" max="50" value="25" id="character-length">
+                </div>
+                <div class="form-block">
+                    <input type="checkbox" name="include-uppercase" id="include-uppercase">
+                    <label for="include-uppercase">Include Uppercase Letters</label>
+                </div>
+                <div class="form-block">
+                    <input type="checkbox" name="include-lowercase" id="include-lowercase">
+                    <label for="include-lowercase">Include Lowercase Letters</label>
+                </div>
+                <div class="form-block">
+                    <input type="checkbox" name="include-numbers" id="include-numbers">
+                    <label for="include-numbers">Include Numbers</label>
+                </div>
+                <div class="form-block">
+                    <input type="checkbox" name="include-symbols" id="include-symbols">
+                    <label for="include-symbols">Include Symbols</label>
+                </div>
+                <div class="form-block">
+                    <label for="strength-indicator">Strength</label>
+                    <p id="strength-indicator">Low</p>
+                </div>
+                <div class="form-block">
+                    <button id="generate">Generate</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
