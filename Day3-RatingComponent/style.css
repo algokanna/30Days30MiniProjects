@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 16px;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #bcbcbc;
+}
+.rating-card{
+    width:320px;
+    height: 380px;
+    padding: 1.25rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    background-color: #e0e0e0;
+}
+.star-icon{
+    width: 40px;
+    height: 40px;
+    padding: 0.6rem;
+    background-color: #e18f17;
+    border-radius: 50%;
+}
+.star-icon > svg{
+    color: #eee;
+}
+.rating-card h3{
+    font-size: 2rem;
+}
+.rating-card p{
+    font-size: 1rem;
+}
+.rating-card button{
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 1.2rem;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    background-color: #5c5956;
+    color: #eee;
+    cursor: pointer;
+}
+.rating-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.rating-level{
+    width: 40px;
+    height: 40px;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid #e18f17;
+    background-color: transparent;
+    color: #e18f17;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2.35rem;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+.rated{
+    background-color: #e18f17;
+    color: #eee;
+}
