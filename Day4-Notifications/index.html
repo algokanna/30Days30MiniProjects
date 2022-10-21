@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Day 4 - Notifications</title>
+</head>
+
+<body>
+    <main>
+        <div class="notification-block">
+            <div class="title-block flex">
+                <div class="notification-count">
+                    <span>Notifications</span>
+                    <span id="unread-count">3</span>
+                </div>
+                <div id="mark-all-as-read">Mark all as read</div>
+            </div>
+            <div class="notification-list">
+                <div class="notification-card unread">
+                    <div class="profile-pic"><img src="./profile-pic-2.jpg" alt="profile picture"></div>
+                    <div class="action">
+                        <span class="full-name">Johnny Clarkson</span>
+                        <span class="action">reacted to your recent post</span>
+                        <span class="object">My first day at new job today!</span>
+                        <span class="timestamp">1m ago</span>
+                    </div>
+                    <span class="unread-indicator"></span>
+                </div>
+                <div class="notification-card unread">
+                    <div class="profile-pic"><img src="./profile-pic-1.jpg" alt="profile picture"></div>
+                    <div class="action">
+                        <span class="full-name">Emilia Kubrick</span>
+                        <span class="action">followed you</span>
+                        <span class="timestamp">5m ago</span>
+                    </div>
+                    <span class="unread-indicator"></span>
+                </div>
+                <div class="notification-card unread">
+                    <div class="profile-pic"><img src="./profile-pic-3.jpg" alt="profile picture"></div>
+                    <div class="action">
+                        <span class="full-name">Christina Ryder</span>
+                        <span class="action">has joined your group</span>
+                        <span class="object">Front-end Development</span>
+                        <span class="timestamp">3h ago</span>
+                    </div>
+                    <span class="unread-indicator"></span>
+                </div>
+                <div class="notification-card unread">
+                    <div class="profile-pic"><img src="./profile-pic-4.jpg" alt="profile picture"></div>
+                    <div class="action">
+                        <span class="full-name">Tomoko Hamasaki</span>
+                        <span class="action">sent you a private message</span>
+                        <span class="timestamp">10h ago</span>
+                        <p class="message">Hi, just wanna say thanks for letting me join Front-end Development group. It's really helpful for me and I love hanging with other developers.</p>
+                    </div>
+                    <span class="unread-indicator"></span>
+                </div>
+                <div class="notification-card unread">
+                    <div class="profile-pic"><img src="./profile-pic-5.jpg" alt="profile picture"></div>
+                    <div class="action">
+                        <span class="full-name">Jessica Lee</span>
+                        <span class="action">commented on your picture</span>
+                        <span class="timestamp">1d ago</span>
+                    </div>
+                    <span class="unread-indicator"></span>
+                </div>
+                <div class="notification-card unread">
+                    <div class="profile-pic"><img src="./profile-pic-6.jpg" alt="profile picture"></div>
+                    <div class="action">
+                        <span class="full-name">Johnny Chen</span>
+                        <span class="action">has joined your group</span>
+                        <span class="object">Front-end Development</span>
+                        <span class="timestamp">1d ago</span>
+                    </div>
+                    <span class="unread-indicator"></span>
+                </div>
+                <div class="notification-card unread">
+                    <div class="profile-pic"><img src="./profile-pic-7.jpg" alt="profile picture"></div>
+                    <div class="action">
+                        <span class="full-name">Steve Meisen</span>
+                        <span class="action">reacted to your post</span>
+                        <span class="object">How to generate more leads from LinkedIn</span>
+                        <span class="timestamp">2d ago</span>
+                    </div>
+                    <span class="unread-indicator"></span>
+                </div>
+                <div class="notification-card unread">
+                    <div class="profile-pic"><img src="./profile-pic-8.jpg" alt="profile picture"></div>
+                    <div class="action">
+                        <span class="full-name">James Carter</span>
+                        <span class="action">commented on your recent post</span>
+                        <span class="object">How to generate more leads from LinkedIn</span>
+                        <span class="timestamp">2d ago</span>
+                    </div>
+                    <span class="unread-indicator"></span>
+                </div>
+            </div>
+        </div>
+    </main>
+<script src="./script.js"></script>
+</body>
+
+</html>
