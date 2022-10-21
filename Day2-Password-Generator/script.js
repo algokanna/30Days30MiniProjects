@@ -39,10 +39,10 @@ const charLength = document.querySelector("#character-length"),
   ],
   upperCases = lowerCases.toString().toUpperCase().split(","),
   numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-  symbols = "`~!@#$%^&*()-_=+[{]}\\|;:'\",<.>/? ".split(""),
+  symbols = "`~!@#$%^&*()-_=+[{]}\\|;:'\",<.>/?".split(""),
   charPool = [];
 let pwdLength = 0,
-  pwd = "";
+    pwd = "";
 function charLengthUpdate() {
   charLengthIndicator.innerHTML = charLength.value;
 }
@@ -50,141 +50,16 @@ function charPoolGenerate() {
   // Reset Character Pool
   charPool.length = 0;
   // Check the character types the user want to include in the generated password and generate a new character pool
-  if (
-    includeLowercase.checked &&
-    !includeUppercase.checked &&
-    !includeNumbers.checked &&
-    !includeSymbols.checked
-  ) {
+  if (includeLowercase.checked){
     charPool.push(...lowerCases);
   }
-  if (
-    !includeLowercase.checked &&
-    includeUppercase.checked &&
-    !includeNumbers.checked &&
-    !includeSymbols.checked
-  ) {
+  if (includeUppercase.checked){
     charPool.push(...upperCases);
   }
-  if (
-    !includeLowercase.checked &&
-    !includeUppercase.checked &&
-    includeNumbers.checked &&
-    !includeSymbols.checked
-  ) {
+  if (includeNumbers.checked){
     charPool.push(...numbers);
   }
-  if (
-    !includeLowercase.checked &&
-    !includeUppercase.checked &&
-    !includeNumbers.checked &&
-    includeSymbols.checked
-  ) {
-    charPool.push(...symbols);
-  }
-  if (
-    includeLowercase.checked &&
-    includeUppercase.checked &&
-    !includeNumbers.checked &&
-    !includeSymbols.checked
-  ) {
-    charPool.push(...lowerCases);
-    charPool.push(...upperCases);
-  }
-  if (
-    includeLowercase.checked &&
-    !includeUppercase.checked &&
-    includeNumbers.checked &&
-    !includeSymbols.checked
-  ) {
-    charPool.push(...lowerCases);
-    charPool.push(...numbers);
-  }
-  if (
-    includeLowercase.checked &&
-    !includeUppercase.checked &&
-    !includeNumbers.checked &&
-    includeSymbols.checked
-  ) {
-    charPool.push(...lowerCases);
-    charPool.push(...symbols);
-  }
-  if (
-    !includeLowercase.checked &&
-    includeUppercase.checked &&
-    includeNumbers.checked &&
-    !includeSymbols.checked
-  ) {
-    charPool.push(...upperCases);
-    charPool.push(...numbers);
-  }
-  if (
-    !includeLowercase.checked &&
-    includeUppercase.checked &&
-    !includeNumbers.checked &&
-    includeSymbols.checked
-  ) {
-    charPool.push(...upperCases);
-    charPool.push(...symbols);
-  }
-  if (
-    !includeLowercase.checked &&
-    !includeUppercase.checked &&
-    includeNumbers.checked &&
-    includeSymbols.checked
-  ) {
-    charPool.push(...numbers);
-    charPool.push(...symbols);
-  }
-  if (
-    includeLowercase.checked &&
-    includeUppercase.checked &&
-    includeNumbers.checked &&
-    !includeSymbols.checked
-  ) {
-    charPool.push(...lowerCases);
-    charPool.push(...upperCases);
-    charPool.push(...numbers);
-  }
-  if (
-    includeLowercase.checked &&
-    includeUppercase.checked &&
-    !includeNumbers.checked &&
-    includeSymbols.checked
-  ) {
-    charPool.push(...lowerCases);
-    charPool.push(...upperCases);
-    charPool.push(...symbols);
-  }
-  if (
-    !includeLowercase.checked &&
-    includeUppercase.checked &&
-    includeNumbers.checked &&
-    includeSymbols.checked
-  ) {
-    charPool.push(...upperCases);
-    charPool.push(...numbers);
-    charPool.push(...symbols);
-  }
-  if (
-    includeLowercase.checked &&
-    !includeUppercase.checked &&
-    includeNumbers.checked &&
-    includeSymbols.checked
-  ) {
-    charPool.push(...lowerCases);
-    charPool.push(...numbers);
-    charPool.push(...symbols);
-  }
-  if (
-    includeLowercase.checked &&
-    includeUppercase.checked &&
-    includeNumbers.checked &&
-    includeSymbols.checked
-  ) {
-    charPool.push(...lowerCases);
-    charPool.push(...upperCases);
-    charPool.push(...numbers);
+  if (includeSymbols.checked){
     charPool.push(...symbols);
   }
   // Shuffle character pool randomly
