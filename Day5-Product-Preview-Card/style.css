@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  --white: #fdfdfd;
+  --grey: #f3eae3;
+  --darker-grey: #7a7b80;
+  --black: #1e252d;
+}
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--grey);
+}
+.product-preview-card {
+  width: 600px;
+  height: 450px;
+  margin: auto;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--white);
+  box-shadow: 1px 1px 7px var(--darker-grey);
+}
+.product-image {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem 0 0 1rem;
+}
+.product-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.product-description h3 {
+  color: var(--darker-grey);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+.product-description h4 {
+  font-family: "DM Serif Display", serif;
+  font-size: 2rem;
+  color: var(--black);
+}
+.product-description p {
+  color: var(--darker-grey);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+}
+.price-tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.price-tag-after {
+  font-family: "DM Serif Display", serif;
+  font-size: 2rem;
+  color: var(--black);
+}
+.price-tag-before {
+  font-family: "DM Serif Display", serif;
+  font-size: 0.8rem;
+  color: var(--darker-grey);
+  text-decoration: line-through;
+}
+.add-to-cart {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem;
+  background-color: var(--black);
+  font-weight: bold;
+  color: var(--white);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.add-to-cart span:nth-child(1) {
+  display: inline-block;
+  width: 30px;
+  height: 16px;
+  transform: translateY(-2px);
+}
+.add-to-cart span:nth-child(2) {
+  display: inline-block;
+}
+@media only screen and (max-width: 600px) {
+  .product-preview-card {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+  .product-image {
+    width: 100%;
+    height: 240px;
+    border-radius: 1rem 1rem 0 0;
+  }
+  .product-description {
+    min-height: 400px;
+  }
+}
