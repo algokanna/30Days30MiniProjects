@@ -143,3 +143,9 @@ div.action {
 .unread {
   background-color: var(--unread);
 }
+
+@media screen and (max-width:500px){
+  .notification-block{
+    width: 100%;
+  }
+}
