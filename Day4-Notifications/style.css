@@ -14,7 +14,10 @@
   --black: #2a2c30;
   --hover:#e9ecf3;
 }
-
+a{
+  display: block;
+  text-decoration: none;
+}
 main {
   width: 100%;
   min-height: 100vh;
