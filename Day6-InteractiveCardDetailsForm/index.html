@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Day 6 - Interactive Card Details Form</title>
+</head>
+
+<body>
+    <main>
+        <div id="side-bg">
+            <img src="./images/bg-main-desktop.png" alt="side background image">
+        </div>
+        <div class="form-block">
+            <form action="" id="card-details" class="show">
+                <label for="card-holder-name">Cardholder Name</label>
+                <input type="text" name="card-holder-name" id="card-holder-name" placeholder="e.g. Jane Appleseed" maxlength="255" required>
+                <span id="warning-message-1">&nbsp</span>
+                <label for="card-number">Card Number</label>
+                <input type="number" name="card-number" id="card-number" placeholder="e.g. 1234 5678 9123 0000" required>
+                <span id="warning-message-2">&nbsp</span>
+                <div class="flex">
+                    <div class="expire-date">
+                        <label for="expire-date">Exp. Date(MM/YY)</label>
+                        <input type="number" name="expire-month" id="expire-month" placeholder="MM" min="00" max="12" required>
+                        <input type="number" name="expire-year" id="expire-year" placeholder="YY" min="00" max="99" required>
+                        <span id="warning-message-3">&nbsp</span>
+                    </div>
+                    <div class="cvc">
+                        <label for="cvc">CVC</label>
+                        <input type="number" name="cvc" id="cvc" placeholder="e.g. 123" min="000" max="999" required>
+                        <span id="warning-message-4">&nbsp</span>
+                    </div>
+                </div>
+                <input type="submit" value="Confirm">
+            </form>
+            <div id="completed-state" class="hide">
+                <img src="./images/icon-complete.svg" alt="completed icon">
+                <h3>Thank You</h3>
+                <p>We've added your card details</p>
+                <button id="continue">Continue</button>
+            </div>
+        </div>
+        <div class="ontop-wrapper">
+            <div class="wrapper">
+                <div class="card-front">
+                    <img src="./images/card-logo.svg" alt="card logo">
+                    <p id="card-number-display">0000 0000 0000 0000</p>
+                    <div class="card-front-bottom">
+                        <p id="cardholder-name-display">Jane Appleseed</p>
+                        <p id="expire-date-display">
+                            <span id="expire-month-display">00</span>/<span id="expire-year-display">00</span>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p id="cvc-display">000</p>
+                </div>
+                <div class="card-front-shadow"></div>
+                <div class="card-back-shadow"></div>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
