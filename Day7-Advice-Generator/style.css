@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+main {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--dark-blue);
+}
+.advice-card {
+  width: 540px;
+  height: 333px;
+  padding: 1rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: var(--dark-grayish-blue);
+}
+.advice-card h1 {
+  color: var(--neon-green);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+.advice-card p {
+  color: var(--light-cyan);
+  font-size: 1.75rem;
+  text-align: center;
+}
+.advice-card button {
+  width: 65px;
+  height: 65px;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--neon-green);
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  .advice-card {
+    width: 85%;
+    height: 315px;
+    padding: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .advice-card {
+    width: 90%;
+    height: 400px;
+    padding: 0.1rem;
+  }
+}
