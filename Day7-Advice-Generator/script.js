@@ -16,16 +16,15 @@ generateBtn.addEventListener("click", () => {
     .then((res) => {
       if (res.ok) {
         console.log("SUCCESS");
+        res.json().then((data) => {
+          adviceDisplay.innerHTML = data.slip.advice;
+          adviceId.innerHTML = `Advice #${data.slip.id}`;
+        });
       } else {
         console.log("Not Successful");
       }
-      res.json();
     })
-    .then((data) => {
-      adviceDisplay.innerHTML = data.slip.advice;
-      adviceId.innerHTML = `Advice #${data.slip.id}`;
-    })
-    .catch((error) => console.log("ERROR"));
+    .catch((error) => console.log(error));
 });
 
 window.addEventListener("load", changeTextDivider);
