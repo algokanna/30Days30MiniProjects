@@ -13,11 +13,19 @@ function changeTextDivider() {
 
 generateBtn.addEventListener("click", () => {
   fetch("https://api.adviceslip.com/advice")
-    .then((res) => res.json())
+    .then((res) => {
+      if (res.ok) {
+        console.log("SUCCESS");
+      } else {
+        console.log("Not Successful");
+      }
+      res.json();
+    })
     .then((data) => {
       adviceDisplay.innerHTML = data.slip.advice;
       adviceId.innerHTML = `Advice #${data.slip.id}`;
-    });
+    })
+    .catch((error) => console.log("ERROR"));
 });
 
 window.addEventListener("load", changeTextDivider);
