@@ -118,9 +118,11 @@ main {
 }
 .show {
   font-size: 1.1rem;
+    height: auto;
 }
 .hide {
   font-size: 0rem;
+  height: 0;
 }
 .current-question {
   font-weight: 700;
