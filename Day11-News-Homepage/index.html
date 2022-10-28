@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Day 11 - News Homepage</title>
+</head>
+<body>
+    <header class="flex row">
+        <div class="logo">
+            <img src="./assets/logo.svg" alt="logo">
+        </div>
+        <nav id="desktop-nav">
+            <ul class="flex row">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Categories</a></li>
+            </ul>
+        </nav>
+        <nav id="mobile-nav">
+            <div id="menu-icon"><img src="./assets/icon-menu.svg" alt="menu icon"></div>
+            <div id="mobile-nav-block" class="mobile-nav-hide">
+                <div id="menu-icon-close"><img src="./assets/icon-menu-close.svg" alt="close menu icon"></div>
+                <div class="menu-overlay"></div>
+                <ul class="flex column">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">New</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">Trending</a></li>
+                    <li><a href="#">Categories</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="flex row">
+        <section class="featured-news flex row">
+            <a href="#"><img src="./assets/image-web-3-desktop.jpg" alt="web 3 illustration"></a>
+            <h1><a href="#">The Bright Future of Web 3.0?</a></h1>
+            <div class="featured-news-description flex column">
+                <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+                <button>Read More</button>
+            </div>
+        </section>
+        <aside class="flex column">
+            <h2>New</h2>
+            <article>
+                <h3><a href="#">Hydrogen VS Electric Cars</a></h3>
+                <p>
+                    Will hydrogen-fueled cars ever catch up to EVs?
+                </p>
+            </article>
+            <div class="divider"></div>
+            <article>
+                <h3><a href="#">The Downsides of AI Artistry</a></h3>
+                <p>
+                    What are the possible adverse effects of on-demand AI image generation?
+                </p>
+            </article>
+            <div class="divider"></div>
+            <article>
+                <h3><a href="#">Is VC Funding Drying Up?</a></h3>
+                <p>
+                    Private funding by VC firms is down 50% YOY. We take a look at what that means.
+                </p>
+            </article>
+        </aside>
+        <section class="bottom-section flex row">
+            <article class="flex row">
+                <a href="#"><img src="./assets/image-retro-pcs.jpg" alt="retro pc"></a>
+                <div class="article-description flex column">
+                    <span>01</span>
+                    <h3><a href="#">Reviving Retro PCs</a></h3>
+                    <p>What happens when old PCs are given modern upgrade?</p>
+                </div>
+            </article>   
+            <article class="flex row"> 
+                <a href="#"><img src="./assets/image-top-laptops.jpg" alt="retro pc"></a>
+                <div class="article-description flex column">
+                    <span>02</span>
+                    <h3><a href="#">Top 10 Laptops of 2022</a></h3>
+                    <p>Our best picks for various needs and budgets</p>
+                </div>
+            </article>   
+            <article class="flex row">
+                <a href="#"><img src="./assets/image-gaming-growth.jpg" alt="retro pc"></a>
+                <div class="article-description flex column">
+                    <span>03</span>
+                    <h3><a href="#">The Growth of Gaming</a></h3>
+                    <p>How the pandemic has sparked fresh opportunities.</p>
+                </div>
+            </article>                      
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
