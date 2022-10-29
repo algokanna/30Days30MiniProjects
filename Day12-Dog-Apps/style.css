@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+body {
+  background-image: -o-linear-gradient(bottom, #e2e1e0, #ffecc7);
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#e2e1e0),
+    to(#ffecc7)
+  );
+  background-image: linear-gradient(0deg, #e2e1e0, #ffecc7);
+}
+
+main {
+  width: 80%;
+  min-height: 100vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+.logo {
+  width: 150px;
+  margin-top: 10rem;
+}
+select {
+  font-size: 1.5rem;
+}
+#gallery {
+  width: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+#gallery > a {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  -webkit-box-shadow: 1px 1px 5px #676767;
+  box-shadow: 1px 1px 5px #676767;
+  -webkit-transition: all ease 0.6s;
+  -o-transition: all ease 0.6s;
+  transition: all ease 0.6s;
+}
+#gallery > a > img {
+  width: 80%;
+  height: 80%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+#gallery > a:hover > img {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.sepia {
+  -webkit-filter: sepia(1);
+  filter: sepia(1);
+  opacity: 0.7;
+}
+.img-hover {
+  width: auto !important;
+  height: 100% !important;
+}
