@@ -22,7 +22,7 @@
 
 main {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,53 +113,58 @@ main {
   color: var(--pale-blue);
   background-color: var(--dark-blue);
 }
+.time-options span {
+  padding: 0.2rem 0.5rem;
+  background-color: transparent;
+  cursor: pointer;
+}
 .bg {
   width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
 }
-.bg svg{
-    width: 84px;
-    position: absolute;
-    top: -90px;
-    right: 0px;
+.bg svg {
+  width: 70px;
+  position: absolute;
+  top: -100px;
+  right: 15px;
 }
 .work-bg {
   background-color: var(--work);
 }
 .work-bg svg {
-  color: #d96b46;
+  color: #c25a36;
 }
-.play-bg{
-    background-color: var(--play);
+.play-bg {
+  background-color: var(--play);
 }
-.play-bg svg{
-    color: #419cbb;
+.play-bg svg {
+  color: #337f99;
 }
-.study-bg{
-    background-color: var(--study);
+.study-bg {
+  background-color: var(--study);
 }
-.study-bg svg{
-    color: #ef4667;
+.study-bg svg {
+  color: #af3b51;
 }
-.exercise-bg{
-    background-color: var(--exercise);
+.exercise-bg {
+  background-color: var(--exercise);
 }
-.exercise-bg svg{
-    color: #2cbc67;
+.exercise-bg svg {
+  color: #2a9757;
 }
-.social-bg{
-    background-color: var(--social);
+.social-bg {
+  background-color: var(--social);
 }
-.social-bg svg{
-    color: #5a1cbb;
+.social-bg svg {
+  color: #5420a7;
 }
-.selfcare-bg{
-    background-color: var(--self-care);
+.selfcare-bg {
+  background-color: var(--self-care);
 }
-.selfcare-bg svg{
-    color: #e6a433;
+.selfcare-bg svg {
+  color: #b48431;
 }
 .time-tracking-card {
   width: 100%;
@@ -179,7 +184,7 @@ main {
   color: white;
 }
 .time-tracking-card-title h3 {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 400;
 }
 .more-option-icon {
@@ -197,7 +202,186 @@ main {
   font-weight: 300;
 }
 .time-tracking-history {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 400;
   color: var(--pale-blue);
+}
+.time-options span:hover {
+  color: var(--exercise);
+}
+.time-tracking-card:hover {
+  background-color: var(--desaturated-blue);
+}
+.time-tracking-card,
+.time-options span {
+  transition: all ease 0.5s;
+}
+.time-option-active {
+  color: var(--exercise);
+  font-size: 1.1rem;
+}
+@media only screen and (max-width: 1140px) {
+  .grid-container {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .time-tracking-display {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 880px) {
+  .grid-container {
+    height: 420px;
+  }
+  .personal-card {
+    height: 260px;
+  }
+  .time-options {
+    height: 160px;
+  }
+  .time-tracking-card {
+    padding: 0.7rem;
+  }
+  .time-tracking-display {
+    margin: 0.25rem 0;
+    font-size: 1.7rem;
+  }
+  .report-title .name {
+    font-size: 1.5rem;
+  }
+  .bg svg {
+    width: 50px;
+    position: absolute;
+    top: -70px;
+    right: 15px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    width: 90%;
+    height: 610px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0.8rem;
+  }
+  .grid-item-1 {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+  }
+  .grid-item-2 {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+  }
+  .grid-item-3 {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+  }
+  .grid-item-4 {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+  }
+  .grid-item-5 {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+  }
+  .grid-item-6 {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+  }
+  .grid-item-7 {
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 1;
+  }
+  .personal-card {
+    height: 70%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.66rem;
+  }
+  .personal-card > * {
+    margin: 0 !important;
+  }
+  .time-options {
+    height: 30%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bg svg {
+    top: -50px;
+    right: 15px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .grid-container {
+    width: 90%;
+    height: 1310px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 0.8rem;
+  }
+  .grid-item-1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+  .grid-item-2 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+  .grid-item-3 {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+  }
+  .grid-item-4 {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+  }
+  .grid-item-5 {
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 1;
+  }
+  .grid-item-6 {
+    grid-column: 1 / span 1;
+    grid-row: 6 / span 1;
+  }
+  .grid-item-7 {
+    grid-column: 1 / span 1;
+    grid-row: 7 / span 1;
+  }
+  .bg svg {
+    top: -65px;
+  }
+  .time-tracking-card {
+    height: calc(100% - 45px);
+    padding: 1rem 0.5rem 0 0.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .time-tracking-card-title {
+    width: 100%;
+  }
+  .time-tracking-card-title h3 {
+    font-size: 1rem;
+  }
+  .time-tracking-display {
+    margin: 0;
+    display: inline-block;
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 300;
+  }
+  .time-tracking-history {
+    display: inline-block;
+    font-size: 1rem;
+  }
+  .time-options span {
+    font-size: 0.8rem;
+  }
 }
