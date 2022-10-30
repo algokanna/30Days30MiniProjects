@@ -1,0 +1,203 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  --blue: hsl(246, 80%, 60%);
+  --work: hsl(15, 100%, 70%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise: hsl(145, 58%, 55%);
+  --social: hsl(264, 64%, 52%);
+  --self-care: hsl(43, 84%, 65%);
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-dark-blue);
+}
+.grid-container {
+  width: 1112px;
+  height: 520px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.66rem;
+}
+.grid-container > * {
+  position: relative;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+.grid-item-1 {
+  border-radius: 0.8rem;
+  background-color: var(--dark-blue);
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+}
+.grid-item-2 {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+.grid-item-3 {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+}
+.grid-item-4 {
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 1;
+}
+.grid-item-5 {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+.grid-item-6 {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+}
+.grid-item-7 {
+  grid-column: 4 / span 1;
+  grid-row: 2 / span 1;
+}
+.personal-card {
+  width: 100%;
+  height: 350px;
+  padding: 1.66rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 0.8rem;
+  background-color: var(--blue);
+}
+.personal-card a {
+  display: block;
+  margin-bottom: 2rem;
+}
+.personal-card a img {
+  width: 83px;
+  height: 83px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.report-title span {
+  display: block;
+  color: var(--pale-blue);
+  font-size: 0.7rem;
+}
+.report-title .name {
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.time-options {
+  width: 100%;
+  height: 170px;
+  padding: 0 1.66rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 0.8rem;
+  color: var(--pale-blue);
+  background-color: var(--dark-blue);
+}
+.bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.bg svg{
+    width: 84px;
+    position: absolute;
+    top: -90px;
+    right: 0px;
+}
+.work-bg {
+  background-color: var(--work);
+}
+.work-bg svg {
+  color: #d96b46;
+}
+.play-bg{
+    background-color: var(--play);
+}
+.play-bg svg{
+    color: #419cbb;
+}
+.study-bg{
+    background-color: var(--study);
+}
+.study-bg svg{
+    color: #ef4667;
+}
+.exercise-bg{
+    background-color: var(--exercise);
+}
+.exercise-bg svg{
+    color: #2cbc67;
+}
+.social-bg{
+    background-color: var(--social);
+}
+.social-bg svg{
+    color: #5a1cbb;
+}
+.selfcare-bg{
+    background-color: var(--self-care);
+}
+.selfcare-bg svg{
+    color: #e6a433;
+}
+.time-tracking-card {
+  width: 100%;
+  height: 100%;
+  padding: 1.66rem;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  right: 0;
+  background-color: var(--dark-blue);
+}
+.time-tracking-card-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.time-tracking-card-title h3 {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.more-option-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.more-option-icon img {
+  width: 18px;
+}
+.time-tracking-display {
+  margin: 1.5rem 0 0.8rem 0;
+  color: white;
+  font-size: 3rem;
+  font-weight: 300;
+}
+.time-tracking-history {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--pale-blue);
+}
