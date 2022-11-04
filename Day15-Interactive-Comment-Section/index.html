@@ -14,7 +14,7 @@
 
 <body>
     <main class="flex">
-        <div class="comment-wrapper">
+        <div class="comment-wrapper flex">
             <div class="comment-card flex">
                 <div class="up-vote-parameter flex">
                     <img src="./assets/icon-plus.svg" alt="up vote" class="up-vote">
@@ -94,16 +94,21 @@
                             </div>
                         </div>
                         <p class="comment-text">
-                            <a href="#" class="handle">@ramsesmiron</a> I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamental are what stay constant.
+                            <a href="#" class="handle">@ramsesmiron</a>
+                            <span>
+                                I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamental are what stay constant.
+                            </span>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        <form action="" class="add-new-comment flex">
+        <form action="" class="add-new-comment main-comment-editor flex">
             <img src="./assets/avatars/image-juliusomo.png" alt="avatar" class="avatar">
-            <textarea class="comment-editor" placeholder="Add a comment..."></textarea>
-            <input type="submit" value="Send" class="submit-btn">
+            <div class="comment-editor">
+                <span contenteditable="true">Add new comment...</span>
+            </div>
+            <input type="submit" value="Send" class="submit-btn send">
         </form>
     </main>
     <script src="./script.js"></script>
