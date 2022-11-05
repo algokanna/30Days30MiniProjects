@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Day 16</title>
+</head>
+
+<body>
+    <main class="flex">
+        <div class="title-block">
+            <h1>Simple, traffic-based pricing</h1>
+            <p>Sign-up for our 30-day trial. No credit card required.</p>
+        </div>
+        <div class="pricing-card">
+            <div class="top-part column-space-between flex">
+                <div class="row-space-between flex">
+                    <p class="pageview">100k Pageviews</p>
+                    <p class="price flex">$16.00 <span class="time-period">/ month</span></p>
+                </div>
+                <div class="price-slider">
+                    <input type="range" id="price-slider" min="8" max="36" step="4" value="8" onchange="console.log(this.value)">
+                    <div class="slider-thumb"></div>
+                    <div class="slider-progress"></div>
+                </div>
+                <div class="billing-options row-flex-end flex">
+                    <div class="monthly-billing">Monthly Billing</div>
+                    <label class="switch">
+                        <input type="checkbox" id="yearly-billing">
+                        <span class="slider round"></span>
+                      </label>
+                      <div class="yearly-billing">
+                        Yearly Billing 
+                        <span class="discount">25% Discount</span>
+                      </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="bottom-part row-space-between flex">
+                <ul class="column-space-between flex">
+                    <li>Unlimited websites</li>
+                    <li>100% data ownership</li>
+                    <li>Email reports</li>
+                </ul>
+                <button>Start my trial</button>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
