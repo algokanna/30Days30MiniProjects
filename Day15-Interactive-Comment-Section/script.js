@@ -293,9 +293,18 @@ function deleteDialogue(e) {
     `;
 }
 function deleteConfirm(e) {
-  const commentCard =
-    e.target.parentElement.parentElement.parentElement.parentElement;
-  commentCard.remove();
+  const commentWrapper = e.target.parentElement.parentElement.parentElement.parentElement;
+  if (commentWrapper.classList.contains("comment-wrapper")){
+    commentWrapper.remove();
+  } else if (commentWrapper.classList.contains("sub-comment-wrapper")){
+    const commentCards = commentWrapper.querySelectorAll(".comment-card");
+    if (commentCards.length === 1){
+      commentWrapper.remove();
+    } else {
+      commentCards[commentCards.length - 1].remove();
+    }
+  }
+
   const deleteButtons = document.querySelectorAll("span.delete");
 
   deleteButtons.forEach((deleteBtn) => {
