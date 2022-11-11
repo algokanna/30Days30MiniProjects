@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./utility.css">
+    <link rel="stylesheet" href="./hamburger-memu.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Day 18 - Blogr Landing Page</title>
+</head>
+
+<body>
+    <div class="wrapper-bg-gradient">
+        <div class="wrapper-bg-img">
+            <header class="flex row align-center">
+                <nav id="desktop-nav" class="flex row space-between align-center">
+                    <ul class="flex row main-menu align-center">
+                        <div class="logo">
+                            <img src="./assets/logo.svg" alt="logo">
+                        </div>
+                        <li>
+                            <a href="#" class="flex row align-center gap-half-r">
+                                Product<img src="./assets/icon-arrow-light.svg" alt="icon">
+                            </a>
+                            <ul class="flex column space-between sub-menu">
+                                <li><a href="#">Product 1</a></li>
+                                <li><a href="#">Product 2</a></li>
+                                <li><a href="#">Product 3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="flex row align-center gap-half-r">
+                                Company<img src="./assets/icon-arrow-light.svg" alt="icon">
+                            </a>
+                            <ul class="flex column space-between sub-menu">
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Commission</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="flex row align-center gap-half-r">
+                                Connect<img src="./assets/icon-arrow-light.svg" alt="icon">
+                            </a>
+                            <ul class="flex column space-between sub-menu">
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Newsletter</a></li>
+                                <li><a href="#">LinkedIn</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="flex row align-center gap-1r login-menu">
+                        <li><a href="#" class="login-btn">Login</a></li>
+                        <li><a href="#" class="cta-btn-1">Sign Up</a></li>
+                    </ul>
+                </nav>
+                <nav id="mobile-nav" class="flex row space-between">
+                    <div class="logo">
+                        <img src="./assets/logo.svg" alt="logo">
+                    </div>
+                    <div id="menu-icon"><img src="./assets/icon-hamburger.svg" alt="menu icon"></div>
+                    <div id="menu-icon-close" class="menu-icon-hide"><img src="./assets/icon-close.svg"
+                            alt="close menu icon"></div>
+                    <div id="mobile-nav-block" class="flex column flex-center align-center mobile-nav-hide">
+                        <ul class="flex column align-center gap-1r">
+                            <li>
+                                <a href="#" class="flex row align-center flex-center gap-half-r">
+                                    Product<img src="./assets/icon-arrow-dark.svg" alt="icon">
+                                </a>
+                                <ul class="flex column gap-1r align-center sub-menu mobile-submenu-hide">
+                                    <li><a href="#">Product 1</a></li>
+                                    <li><a href="#">Product 2</a></li>
+                                    <li><a href="#">Product 3</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="flex row align-center flex-center gap-half-r">
+                                    Company<img src="./assets/icon-arrow-dark.svg" alt="icon">
+                                </a>
+                                <ul class="flex column gap-1r align-center sub-menu mobile-submenu-hide">
+                                    <li><a href="#">Our Team</a></li>
+                                    <li><a href="#">History</a></li>
+                                    <li><a href="#">Commission</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="flex row align-center flex-center gap-half-r">
+                                    Connect<img src="./assets/icon-arrow-dark.svg" alt="icon">
+                                </a>
+                                <ul class="flex column gap-1r align-center sub-menu mobile-submenu-hide">
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Newsletter</a></li>
+                                    <li><a href="#">LinkedIn</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="hero-section flex column flex-start align-center">
+                <h1>A modern publishing platform</h1>
+                <p>Grow your audience and build your online brand</p>
+                <div class="flex row gap-1r">
+                    <a href="#" class="cta-btn-1">Start for free</a>
+                    <a href="#" class="cta-btn-2">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="section-1 flex column flex-start">
+            <h2>Designed for the future</h2>
+            <div class="text-block flex column flex-center">
+                <h3>Introducing an extensible editor</h3>
+                <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating
+                    content. The editor supports management of multiple blogs and allows easy manipulation of embeds
+                    such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add
+                    functionality or change the looks of a blog. </p>
+                <h3>Robust content management</h3>
+                <p>Flexible content management enables users to easily move through posts. Increase the usability of
+                    your blog by adding customized categories, sections, formats, or flow. With this functionality,
+                    you're in full control.</p>
+            </div>
+        </div>
+        <div class="section-2">
+            <div class="wrapper-bg-img-2 flex column align-end flex-center">
+                <img src="./assets/illustration-phones.svg" alt="" class="illustration-2">
+                <div class="text-block">
+                    <h3>State of the Art Infrastructure</h3>
+                    <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast
+                        connectivity. This ensures your site will load instantly, no matter where your readers are,
+                        keeping your site competitive.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-3 flex column flex-center align-end">
+            <div class="text-block ">
+                <h3>Free, open, simple</h3>
+                <p>Blogr is a free open source application backed by a large community of helpful developers. It
+                    supports features such as code syntax highlighting, RSS feeds, social media integration, third-party
+                    commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is
+                    relatively easy to learn.</p>
+                <h3>Powerful tooling</h3>
+                <p>Batteries included. We built a simple and straightfoward CLI tool that makes customization and
+                    deployment a breeze, but capable of producing even the most complicated sites.</p>
+            </div>
+        </div>
+    </main>
+    <footer class="flex row flex-start align-start">
+        <div class="footer-logo"><img src="./assets/logo.svg" alt="logo"></div>
+        <div class="flex column align-start">
+            <h4>Product</h4>
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Integrations</a></li>
+            </ul>
+        </div>
+        <div class="flex column align-start">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+        <div class="flex column align-start">
+            <h4>Connect</h4>
+            <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./hamburger-menu.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+</html>

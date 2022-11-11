@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:ital,wght@0,500;0,700;1,400&display=swap");
+
+:root {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  --light-red: hsl(356, 100%, 66%);
+  --very-light-red: hsl(355, 100%, 74%);
+  --very-dark-blue: hsl(208, 49%, 24%);
+  --white: hsl(0, 0%, 100%);
+  --grayish-blue: hsl(240deg 41% 97%);
+  --very-dark-grayish-blue: hsl(207deg 13% 55%);
+  --very-dark-black-blue: hsl(240, 10%, 16%);
+}
+body {
+  background-color: var(--grayish-blue);
+}
+.wrapper-bg-gradient {
+  width: 100%;
+  max-width: 1440px;
+  height: 600px;
+  margin: auto;
+  overflow: hidden;
+  border-bottom-left-radius: 8rem;
+  background: linear-gradient(45deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+}
+.wrapper-bg-img {
+  width: 100%;
+  max-width: 1440px;
+  height: 600px;
+  margin: auto;
+  background-image: url("./assets/bg-pattern-intro-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 200% auto;
+  background-position: 23% 52%;
+}
+header {
+  width: 80%;
+  justify-content: unset;
+}
+#desktop-nav .main-menu a,
+#desktop-nav .login-menu a {
+  color: var(--grayish-blue);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+#desktop-nav {
+  width: 100%;
+}
+.logo {
+  padding-bottom: 1rem;
+}
+.logo img {
+  width: 100%;
+}
+.main-menu > li {
+  position: relative;
+  padding-bottom: 1rem;
+}
+.main-menu > li > a,
+.login-btn {
+  padding-bottom: 0.1rem;
+  border-bottom: 2px solid transparent;
+}
+.main-menu > a > img {
+  transition: all ease 0.3s;
+}
+.main-menu > li > a:hover,
+.login-btn:hover {
+  color: var(--white) !important;
+  border-bottom: 2px solid var(--white);
+}
+.main-menu > a:hover > img {
+  transform: rotate(180deg);
+}
+.login-menu {
+  padding-bottom: 1rem;
+}
+.cta-btn-1 {
+  padding: 0.8rem 2.25rem;
+  border-radius: 1.5rem;
+  background-color: var(--white);
+  color: var(--light-red) !important;
+}
+.cta-btn-1:hover {
+  background-color: var(--very-light-red);
+  color: var(--white) !important;
+}
+.cta-btn-2 {
+  padding: 0.8rem 2.25rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--white);
+  background-color: transparent;
+  color: var(--white) !important;
+}
+.cta-btn-2:hover {
+  background-color: var(--white);
+  color: var(--light-red) !important;
+}
+#desktop-nav .sub-menu {
+  min-width: 115px;
+  height: 105px;
+  position: absolute;
+  left: 0;
+  bottom: -105px;
+  padding: 1rem;
+  gap: 0;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  opacity: 0;
+  pointer-events: none;
+  transition: all ease 0.4s;
+}
+.main-menu > li:hover > .sub-menu {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+#desktop-nav .sub-menu a {
+  color: var(--very-dark-blue) !important;
+  font-family: "Overpass", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+#desktop-nav .sub-menu a:hover {
+  font-weight: 600;
+}
+#mobile-nav {
+  width: 100%;
+}
+#mobile-nav-block .sub-menu {
+  margin-top: 1rem;
+}
+#mobile-nav-block .sub-menu > li > a {
+  font-size: 0.8rem !important;
+  font-weight: 600;
+}
+#mobile-nav-block ul li a:hover,
+.mobile-menu-item-active {
+  color: var(--very-dark-grayish-blue) !important;
+}
+#mobile-nav .sub-menu {
+  width: 90%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--grayish-blue);
+}
+#mobile-nav a {
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+}
+#mobile-nav ul > li > a {
+  width: 100%;
+  color: var(--very-dark-blue);
+  font-size: 1rem;
+}
+.hero-section {
+  width: 80%;
+  height: 415px;
+  margin: auto;
+  gap: 2.5rem;
+}
+.hero-section h1 {
+  color: var(--white);
+  font-size: 3.4rem;
+  font-weight: 400;
+  text-align: center;
+}
+.hero-section p {
+  color: var(--grayish-blue);
+  font-family: "Overpass", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+main {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
+.section-1 {
+  width: 100%;
+  height: auto;
+  padding-top: 5.5rem;
+  margin-top: 4.35rem;
+  gap: 7.5rem;
+  background-image: url("./assets/illustration-editor-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 64%;
+  background-position: 150.277% center;
+  color: var(--very-dark-blue);
+  font-family: "Overpass", sans-serif;
+}
+.section-1 h2 {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -0.1rem;
+}
+.section-1 .text-block {
+  width: 37.5%;
+  margin-left: 11.1%;
+}
+.section-1 .text-block h3,
+.section-3 .text-block h3 {
+  margin-bottom: 37px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.section-1 .text-block p,
+.section-3 .text-block p {
+  margin-bottom: 88px;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+.section-2 {
+  width: 100%;
+  height: 400px;
+  margin: 50px 0;
+  position: relative;
+  border-top-right-radius: 8rem;
+  border-bottom-left-radius: 8rem;
+  background: linear-gradient(45deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  color: var(--white);
+}
+.wrapper-bg-img-2 {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 8rem;
+  border-bottom-left-radius: 8rem;
+  background-image: url("./assets/bg-pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-size: 72%;
+  background-position: -220px -511px;
+}
+.illustration-2 {
+  width: 38.33%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 9%;
+  margin: auto;
+}
+.section-2 .text-block {
+  width: 35.97%;
+  margin-right: 12.57%;
+  font-family: "Overpass", sans-serif;
+}
+.section-2 .text-block h3 {
+  margin-bottom: 20px;
+  font-size: 1.9rem;
+}
+.section-2 .text-block p {
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+.section-3 {
+  width: 100%;
+  height: 789px;
+  margin: 7rem 0 7.625rem 0;
+  background-image: url("./assets/illustration-laptop-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 67.5%;
+  background-position: -58.81% center;
+  color: var(--very-dark-blue);
+  font-family: "Overpass", sans-serif;
+}
+.section-3 .text-block {
+  width: 36.66%;
+  margin-right: 12.56%;
+}
+.section-3 .text-block > p:nth-child(4) {
+  margin: 0;
+}
+footer {
+  width: 100%;
+  max-width: 1440px;
+  padding: 4.375rem 10rem;
+  margin: auto;
+  gap: 11rem;
+  border-top-right-radius: 8rem;
+  background-color: var(--very-dark-black-blue);
+  color: var(--white);
+  font-family: "Overpass", sans-serif;
+}
+.footer-logo {
+  width: auto;
+}
+.footer-logo img {
+  width: 100%;
+}
+footer h4 {
+  padding-bottom: 2.8125rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+footer a {
+  border-bottom: 1px solid transparent;
+  color: var(--white);
+  font-size: 0.8rem;
+}
+footer a:hover {
+  border-bottom: 1px solid var(--white);
+}
+footer li {
+  padding-bottom: 0.5rem;
+}
+@media only screen and (max-width: 1161px) {
+  footer {
+    gap: 8rem;
+  }
+}
+
+@media only screen and (max-width: 1015px) {
+  footer {
+    gap: 2rem 8rem;
+  }
+  .footer-logo {
+    width: 100%;
+  }
+  .footer-logo img {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 900px) {
+  header {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #desktop-nav .main-menu a,
+  #desktop-nav .login-menu a {
+    font-size: 0.8rem;
+  }
+  .logo,
+  .footer-logo img {
+    width: 75px;
+  }
+  .login-menu .cta-btn-1 {
+    padding: 0.4rem 1.2rem;
+  }
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+  .cta-btn-1,
+  .cta-btn-2 {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 786px) {
+  footer {
+    padding: 4.375rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .text-block > *{
+    text-align: center;
+  }
+  .section-1,
+  .section-3 {
+    background-image: none;
+    height: auto;
+    padding: 2rem;
+  }
+  .section-1,
+  .section-2,
+  .section-3 {
+    margin: 0;
+  }
+  .section-1,
+  .section-3{
+    overflow: hidden;
+  }
+  .section-1 .text-block,
+  .section-2 .text-block,
+  .section-3 .text-block {
+    width: 100%;
+    margin: 0;
+  }
+  .section-1 {
+    padding: 0 2rem;
+    margin-top: 4rem;
+    gap: 4rem;
+  }
+  .section-1 h2 {
+    margin: 0;
+  }
+  .mobile-illustration {
+    width: 100%;
+  }
+  .section-2{
+    height: 623px;
+    margin-top: 203px;
+  }
+  .wrapper-bg-img-2{
+    background-size: 115%;
+    background-position: center -210px;
+  }
+  .illustration-2 {
+    width: 85%;
+    right: 0;
+    left: 0;
+    top: -613px;
+  }
+  .section-2 .text-block{
+    width: 80%;
+  }
+  .section-3{
+    padding: 4rem 2rem;
+  }
+  .section-3 .mobile-illustration{
+    width: 150%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .footer-logo{
+    width: auto;
+  }
+  footer li{
+    text-align: center;
+  }
+  footer h4{
+    font-size: 1.3rem;
+  }
+  footer a{
+    font-size: 1rem;
+  }
+  footer > .flex{
+    align-items: center;
+  }
+}
