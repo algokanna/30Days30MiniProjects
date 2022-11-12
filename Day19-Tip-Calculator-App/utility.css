@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+input,
+button,
+span {
+  outline: none;
+  border: none;
+}
+span{
+    display: inline-block;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+a,
+button,
+input[type="submit"] {
+  transition: all ease 0.4s;
+}
+.wrapper-80 {
+  width: 80%;
+}
+.wrapper-90 {
+  width: 90%;
+}
+.wrapper-95 {
+  width: 95%;
+}
+.wrapper-full {
+  width: 100%;
+  max-width: 1440px;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
+}
+.flex-start {
+  justify-content: flex-start;
+}
+.flex-end {
+  justify-content: flex-end;
+}
+.flex-center{
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+.align-start {
+  align-items: flex-start;
+}
+.align-end {
+  align-items: flex-end;
+}
+.gap-half-r {
+  gap: 0.5rem;
+}
+.gap-1r {
+  gap: 1rem;
+}
+.gap-2r {
+  gap: 2rem;
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+}

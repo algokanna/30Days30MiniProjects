@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./utility.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Day 19 - Tip Calculator App</title>
+</head>
+
+<body>
+    <main class ="flex column flex-center align-center">
+        <div class="logo">
+            <img src="./aseets/logo.svg" alt="logo">
+        </div>
+        <div class="calculator flex row align-center space-between">
+            <div class="input-form flex column space-between align-start">
+                <span class="label">Bill</span>
+                <div class="input-field flex row space-between align-center">
+                    <img src="./aseets/icon-dollar.svg" alt="dollar icon" class="icon">
+                    <p contenteditable="true" id="bill-amount">0</p>
+                </div>
+                <p id="bill-amount-warning" class="warning"></p>
+                <span class="label">Select Tip %</span>
+                <div class="tip-percent-input flex row space-between align-center">
+                    <p id="5-percent" class="percent-click">5%</p>
+                    <p id="10-percent" class="percent-click">10%</p>
+                    <p id="15-percent" class="percent-click">15%</p>
+                    <p id="25-percent" class="percent-click">25%</p>
+                    <p id="50-percent" class="percent-click">50%</p>
+                    <p id="custom" contenteditable="true">Custom</p>
+                </div>
+                <p id="tip-percent-warning" class="warning"></p>
+                <span class="label">Number of People</span>
+                <div class="input-field flex row space-between align-center">
+                    <img src="./aseets/icon-person.svg" alt="people icon" class="icon">
+                    <p contenteditable="true" id="number-of-people">1</p>
+                </div>
+                <p id="number-of-people-warning" class="warning"></p>
+            </div>
+            <div class="display flex column space-between align-center">
+                <div class="flex row space-between align-center">
+                    <label class="flex column">
+                        <p>Tip Amount</p>
+                        <p>/ person</p>
+                    </label>
+                    <p class="tip-display">$0.00</p>
+                </div>
+
+                <div class="flex row space-between align-center">
+                    <label class="flex column">
+                        <p>Total</p>
+                        <p>/ person</p>
+                    </label>
+                    <p class="total-display">$0.00</p>
+                </div>
+
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
