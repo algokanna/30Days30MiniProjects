@@ -16,6 +16,7 @@ main{
     width: 100%;
     max-width: 1440px;
     min-height: 100vh;
+    padding: 4rem 0;
     margin: auto;
     gap: 80px;
 }
@@ -145,4 +146,35 @@ main{
 .tip-percent-active{
     background-color: var(--light-grayish-cyan) !important;
     color: var(--very-dark-cyan) !important;
+}
+
+@media only screen and (max-width:990px){
+    .calculator{
+        width: 90%;
+    }
+}
+@media only screen and (max-width:768px){
+    .calculator{
+        height: auto;
+    }
+    .display{
+        min-height: 400px;
+    }
+    .display label{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:640px){
+    .calculator{
+        flex-direction: column;
+    }
+    .calculator > *{
+        width: 100%;
+    }
+    .display{
+        min-height: auto;
+    }
+    .tip-percent-input > p{
+        width: 46%;
+    }
 }
