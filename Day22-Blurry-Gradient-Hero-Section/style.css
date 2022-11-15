@@ -1,0 +1,207 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 16px;
+}
+.hero-section{
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    filter: blur(2px);
+    animation: hue-shift 15s ease-in-out infinite;
+}
+.gradient-1{
+    width: 200%;
+    min-width: 1440px;
+    height: 200%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    background-image: radial-gradient(circle, hsl(0, 91%, 65%), hsl(132, 73%, 84%), hsl(8, 100%, 71%));
+    opacity: 0;
+    animation: gradient-1-animation 7s ease-in-out infinite;
+}
+.gradient-2{
+    width: 200%;
+    min-width: 1440px;
+    height: 200%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-image: radial-gradient(circle, hsl(22deg 100% 54% / 52%), hsl(230deg 91% 39% / 47%));
+    animation: gradient-2-animation 7s ease-out infinite;
+    animation-delay: 0.1s;
+}
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 1px 0 10px white;
+}
+.logo{
+    color: white;
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+nav ul li a{
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    color: white;
+    text-decoration: none;
+    transition: all ease 0.3s;
+}
+nav ul li a:hover{
+    border: 1px solid white;
+}
+.hero-message{
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.message{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    color: white;
+    font-size: 3.5rem;
+}
+.anim{
+    opacity: 0;
+    transform: scale(1.25);
+    display: block;
+    animation: pop 5s ease-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes gradient-1-animation{
+    0%{
+        transform: translateX(0) rotate(0);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-20%) rotate(6deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-50%) rotate(0);
+        opacity: 0;
+    }
+}
+@keyframes gradient-2-animation{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes hue-shift{
+    0%{
+        filter: hue-rotate(0);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes wavy{
+    0%{
+        opacity: 0;
+        transform: translateY(250px);
+    }
+    10%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    70%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-250px);
+    }
+}
+@keyframes pop{
+    0%{
+        filter: blur(4px);
+        transform: scale(1.25) rotateY(90deg);
+        opacity: 0;
+    }
+    20%{
+        filter: blur(0px);
+        transform: scale(0.8) rotateY(0deg);
+        opacity: 1;
+    }
+    50%{
+        filter: blur(0px);
+        transform: scale(0.8) rotateY(0deg);
+        opacity: 1;
+    }
+    60%{
+        filter: blur(4px);
+        transform: scale(0.9) rotateY(90deg);
+        opacity: 0;
+    }
+    100%{
+        filter: blur(4px);
+        transform: scale(0.9) rotateY(90deg);
+        opacity: 0;
+    }
+}
