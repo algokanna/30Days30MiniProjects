@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./utility.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Day 25 - New Year Countdown Timer</title>
+</head>
+<body>
+    <main>
+        <div class="wrapper flex column flex-center align-center">
+            <div class="time-display flex row flex-center align-center gap-1r">
+                <div class="day flex column gap-half-r align-center">
+                    <p class="day-count"></p>
+                    <p>Days</p>
+                </div>
+                <div class="spacer">:</div>
+                <div class="hour flex column gap-half-r align-center">
+                    <p class="hour-count"></p>
+                    <p>Hours</p>
+                </div>
+                <div class="spacer">:</div>
+                <div class="minute flex column gap-half-r align-center">
+                    <p class="minute-count"></p>
+                    <p>Minutes</p>
+                </div>
+                <div class="spacer">:</div>
+                <div class="second flex column gap-half-r align-center">
+                    <p class="second-count"></p>
+                    <p>Seconds</p>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <p>til New Year's Day</p>
+        </div>
+        <div class="overlay"></div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
