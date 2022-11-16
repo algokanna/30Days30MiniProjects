@@ -1,0 +1,136 @@
+body{
+    background-color: var(--bg);
+    color:var(--grey);
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    --grey:
+    hsl(30deg 12% 43%);
+    --white:
+    hsl(0, 0%, 100%);
+    --primary:
+    hsl(28deg 61% 60%);
+    --bg: hsl(168deg 22% 11%);
+    --bg-opacity: rgba(33, 30, 28, 0.6);
+}
+main{
+    width: 100%;
+    max-width: 1440px;
+    padding: 650px 0 250px 0;
+    margin: auto;
+    gap: 8rem;
+}
+.gallery-card{
+    width: 80%;
+    overflow: hidden;
+    transition: all ease 1s;
+}
+.text-block{
+    width: 35%;
+    height: 550px;
+    position: relative;
+}
+.text-block p{
+    font-size: 1.1rem;
+}
+.id{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    color: var(--grey);
+    font-size: 5rem;
+    font-weight: 700;
+    transition: all ease 1s;
+}
+.title{
+    width: 70vw;
+    position: absolute;
+    top: 95px;
+    left: 0;
+    z-index: 999;
+    color: var(--primary);
+    font-size: 2.5rem;
+    font-weight: 200;
+    transition: all ease 1.5s;
+}
+.preview{
+    width: 60%;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgb(25, 25, 25);
+}
+.img-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 997;
+    background-color: var(--bg-opacity);
+    transition: all ease 1s;
+}
+.preview img{
+    width: 120%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease 1s;
+}
+.top-banner{
+    width: 1000vw;
+    padding: 2rem 1rem;
+    position: fixed;
+    top: 0;
+    left: -10%;
+    z-index: 1010;
+    background-color: var(--bg-opacity);
+    color: var(--primary);
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    box-shadow: 0 1px 5px var(--primary);
+    mix-blend-mode: color-dodge;
+    transition: all ease 0.7s;
+}
+@media only screen and (max-width:1000px){
+    :root{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width:800px){
+    :root{
+        font-size: 14px;
+    }
+    .top-banner{
+        width: 2000vw;
+    }
+}
+@media only screen and (max-width:675px){
+    .title{
+        width: 100vw;
+    }
+}
+@media only screen and (max-width:600px){
+    .text-block,
+    .preview{
+        width: 100%;
+    }
+    .preview{
+        height: 250px;
+        order: 1;
+    }
+    .text-block{
+        height: 450px;
+        order: 2;
+    }
+    .title{
+        width: 100%;
+    }
+}
