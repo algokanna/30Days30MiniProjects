@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;400;600&display=swap');
+
+:root{
+    font-family: 'Public Sans', sans-serif;
+    --bg:
+    hsl(255, 11%, 85%);
+    --light-grey:
+    hsl(0, 0%, 96%);
+    --dark-grey:
+    hsl(247deg 9% 66%);
+    --primary:
+    hsl(239deg 70% 59%);
+    --black:
+    hsl(0, 0%, 20%);
+}
+main{
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 0;
+    margin: auto;
+    background-color: var(--bg);
+}
+.music-player{
+    width: 450px;
+    height: 920px;
+    padding-top: 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--light-grey);
+    gap: 1.25rem;
+}.music-player > * {
+    width: 370px;
+}
+ion-icon {
+    color: var(--dark-grey);
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+.section-3 ion-icon{
+    padding: 0.4rem;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all ease 0.75s;
+}
+.section-3 ion-icon:hover{
+    background-color: var(--primary);
+    color: var(--light-grey);
+}
+.section-5 ion-icon{
+    padding: 1rem;
+    border-radius: 50%;
+    color: var(--primary);
+    font-size: 3.25rem;
+    outline: 2px solid transparent;
+    filter: drop-shadow(0 11px 6px rgba(172, 184, 204, 0.45));
+    transition: all ease 0.5s;
+}
+.section-5 ion-icon:hover{
+    outline: 2px solid var(--primary);
+    transform: scale(1.05);
+}
+.section-1{
+    height: 370px;
+    position: relative;
+}
+.album-cover{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    margin: auto;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    box-shadow: 0px 20px 15px hsl(0deg 4% 85%);
+}
+.album-cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.titles{
+    gap: 0.25rem;
+}
+.track-title{
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.artist-name{
+    color: var(--dark-grey);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+input[type="range"]{
+    margin-left: 0.5rem;
+    height: 5px;
+    accent-color: var(--primary);
+}
+.progress-bar{
+    width: 100%;
+    position: relative;
+    margin: 1rem 0;
+}
+.progress-bar-bg{
+    width: 100%;
+    height: 5px;
+    border-radius: 2rem;
+    background-color: var(--bg);
+}
+.current-progress{
+    width: 1%;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2rem;
+    background-color: var(--primary);
+}
+.current-time{
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 600;
+}
+.total-time{
+    color: var(--black);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.active-state{
+    color: var(--primary);
+    transform: scale(1.5);
+}

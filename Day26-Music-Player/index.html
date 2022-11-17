@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./utility.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Day 26 - Music Player</title>
+</head>
+<body>
+    <main class="flex column flex-center align-center">
+        <div class="music-player flex column align-center">
+            <div class="section-1">
+                <div class="album-cover">
+                    <img src="./assets/carly-rae-jepsen-the-loneliest-time-Cover-Art.jpg" alt="">
+                </div>
+            </div> 
+            <div class="section-2">
+                <div class="titles flex column">
+                    <p class="track-title">Talking to Yourself</p>
+                    <p class="artist-name">Carly Rae Jepsen</p>
+                </div>
+            </div>
+            <div class="section-3 flex row space-between align-center">
+                <div class="love-btn"><ion-icon name="heart"></ion-icon></div>
+                <div class="share-btn"><ion-icon name="share-social"></ion-icon></div>
+                <div class="add-to-playlist-btn"><ion-icon name="add-circle"></ion-icon></div>
+                <div class="loop-btn"><ion-icon name="repeat"></ion-icon></div>
+                <div class="volume-slider flex row align-center">
+                    <ion-icon name="volume-high"></ion-icon>
+                    <input type="range" name="volume" id="volume" min="0" max="100" step="5" value="70">
+                </div>
+            </div>
+            <div class="section-4 flex row space-between">
+                <div class="progress-bar">
+                    <div class="current-progress"></div>
+                    <div class="progress-bar-bg"></div>
+                </div>
+                <div class="current-time">0 : 00</div>
+                <div class="total-time">4 : 00</div>
+            </div>
+            <div class="section-5 flex row space-between align-center">
+                <div class="previous-btn"><ion-icon name="play-skip-back"></ion-icon></div>
+                <div class="play-btn pause"><ion-icon name="play"></ion-icon></div>
+                <div class="next-btn"><ion-icon name="play-skip-forward"></ion-icon></div>
+            </div>
+            <audio id="audio">
+                <source src="" type="audio/mpeg">
+                Your browser don't support audio element
+            </audio>
+        </div>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
