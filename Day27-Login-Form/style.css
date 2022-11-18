@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  --light-grey: hsl(0, 0%, 93%);
+  --darker-light-grey-1: hsl(0, 0%, 91%);
+  --darker-light-grey-2: hsl(0, 0%, 86%);
+  --lighter-dark-grey: hsl(0, 0%, 75%);
+  --dark-grey: hsl(0, 0%, 65%);
+  --accent: hsl(230deg 92% 62%);
+  --black: hsl(0, 0%, 20%);
+}
+
+main {
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--darker-light-grey-1);
+}
+.login-form {
+  width: 410px;
+  height: 500px;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--light-grey);
+  box-shadow: 11px 11px 35px #cccccc, -11px -11px 35px #f4f4f4;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo-image {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  border-radius: 50%;
+  border: 4px solid white;
+  overflow: hidden;
+  box-shadow: 5px 5px 20px #c3c3c3, -7px -7px 20px #fdfdfd;
+}
+.logo-image img {
+  width: 115%;
+  height: 115%;
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  object-fit: cover;
+  transform: translateX(-50%);
+}
+.logo-type {
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 900;
+}
+.tag-line {
+  color: var(--black);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.login-form form {
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.login-form form input {
+  width: 60%;
+  padding: 0.35rem 0.5rem;
+  border-radius: 1.5rem;
+  box-shadow: -3px 3px 6px #c5c5c5, 3px -3px 6px #fbfbfb;
+  border: none;
+  outline: none;
+}
+.login-form form input[type="submit"] {
+  background-color: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+.bottom-text {
+  color: var(--dark-grey);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.bottom-text a {
+  color: var(--accent);
+  text-decoration: none;
+}
